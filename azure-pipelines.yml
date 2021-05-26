@@ -28,7 +28,7 @@ steps:
 
 - task: SlackNotification@6
   inputs:
-    SlackApiToken: 'a5984f935dbf3a5f436f0ce0902a483d'
+    SlackApiToken: 'xapp-1-A01B21MMFGD-2128623254544-8c5b190b39903c0900bd712cade853b26b147acbfb221dd121f61df0d3878f6c'
     MessageAuthor: 'Test Azure DevOps'
     Channel: '#test-channel'
     IconUrl: 'https://avatars3.githubusercontent.com/u/1507452?v=3&s=200'
