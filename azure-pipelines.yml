@@ -25,6 +25,7 @@ steps:
     body: '{"text": "Hello, world."}'
     urlSuffix: T0NQM0TPH/BG81UDCG4/hxFm8AFEiCgq1FvVzQ8n484f
     waitForCompletion: 'false'
+    
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
