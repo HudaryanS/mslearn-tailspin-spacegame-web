@@ -16,16 +16,27 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: InvokeRESTAPI@1
-  displayName: Slack
-  inputs:
-    connectionType: 'connectedServiceName'
-    serviceConnection: 'Slack'
-    method: 'POST'
-    body: '"text": "Hello, world."'
-    urlSuffix: T0NQM0TPH/BG81UDCG4/hxFm8AFEiCgq1FvVzQ8n484f
-    waitForCompletion: 'false'
+# - task: InvokeRESTAPI@1
+#   displayName: Slack
+#   inputs:
+#     connectionType: 'connectedServiceName'
+#     serviceConnection: 'Slack'
+#     method: 'POST'
+#     body: '"text": "Hello, world."'
+#     urlSuffix: T0NQM0TPH/BG81UDCG4/hxFm8AFEiCgq1FvVzQ8n484f
+#     waitForCompletion: 'false'
 
+- task: SlackNotification@6
+  inputs:
+    SlackApiToken: 'a5984f935dbf3a5f436f0ce0902a483d'
+    MessageAuthor: 'Test Azure DevOps'
+    Channel: '#test-channel'
+    IconUrl: 'https://avatars3.githubusercontent.com/u/1507452?v=3&s=200'
+    NotificationType: 'ChatMessage'
+    Message: |
+      Test Slack task in Azure DevOps
+      $(Pipeline.WebSiteName)
+    UseVariableForMessage: true
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
