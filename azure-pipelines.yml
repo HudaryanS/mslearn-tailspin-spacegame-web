@@ -16,15 +16,6 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-# - task: InvokeRESTAPI@1
-#   displayName: Slack
-#   inputs:
-#     connectionType: 'connectedServiceName'
-#     serviceConnection: 'Slack' xapp-1-A01B21MMFGD-2128623254544-8c5b190b39903c0900bd712cade853b26b147acbfb221dd121f61df0d3878f6c'
-#     method: 'POST'
-#     body: '"text": "Hello, world."'
-#     urlSuffix: T0NQM0TPH/BG81UDCG4/hxFm8AFEiCgq1FvVzQ8n484f
-#     waitForCompletion: 'false'
 
 - task: SlackNotification@6
   inputs:
@@ -32,11 +23,11 @@ steps:
     MessageAuthor: 'Azure DevOps'
     Channel: '#test'
     NotificationType: 'ChatMessage'
-    Message: |
+    Title: 'Build Started'
+    PreText: |
       Test notification from AzureDevops
       $(Pipeline.WebSiteName)
-    UseVariableForMessage: true
-    Title: 'Build Started'
+    UseVariableForPreText: true
 
 - task: NuGetToolInstaller@1
 
