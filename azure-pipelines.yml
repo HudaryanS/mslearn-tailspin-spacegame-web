@@ -1,4 +1,15 @@
 # ASP.NET
+- task: SlackNotification@6
+  inputs:
+    SlackApiToken: 'T0NQM0TPH/BG81UDCG4/hxFm8AFEiCgq1FvVzQ8n484f'
+    MessageAuthor: 'Test Azure DevOps'
+    Channel: '#test-channel'
+    IconUrl: 'https://avatars3.githubusercontent.com/u/1507452?v=3&s=200'
+    NotificationType: 'ChatMessage'
+    Message: |
+      Test slack notification for starting Azure DevOps build.
+       $(Pipeline.WebSiteName)
+    UseVariableForMessage: true
 # Build and test ASP.NET projects.
 # Add steps that publish symbols, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
