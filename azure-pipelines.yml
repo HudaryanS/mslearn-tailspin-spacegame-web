@@ -29,11 +29,15 @@ steps:
 - task: SlackNotification@6
   inputs:
     SlackApiToken: '$(SlackApi)'
-    MessageAuthor: 'Slack Azure DevOps'
+    MessageAuthor: 'Azure DevOps'
     Channel: '#test'
     NotificationType: 'ChatMessage'
-    Message: 'Test: $(Pipeline.WebSiteName)'
+    Message: |
+      Test notification from AzureDevops
+      $(Pipeline.WebSiteName)
     UseVariableForMessage: true
+    Title: 'Build Started'
+
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
