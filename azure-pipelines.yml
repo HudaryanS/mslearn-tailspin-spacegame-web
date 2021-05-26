@@ -32,7 +32,7 @@ steps:
     MessageAuthor: 'Slack Azure DevOps'
     Channel: '#test'
     NotificationType: 'ChatMessage'
-    Message: 'Test'
+    Message: 'Test: $(Pipeline.WebSiteName)'
     UseVariableForMessage: true
 - task: NuGetToolInstaller@1
 
