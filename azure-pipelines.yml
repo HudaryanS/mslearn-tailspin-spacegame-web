@@ -30,7 +30,7 @@ steps:
   inputs:
     SlackApiToken: '$(SlackApi)'
     MessageAuthor: 'Slack Azure DevOps'
-    Channel: '#test-channel'
+    Channel: '#test'
     NotificationType: 'ChatMessage'
     Message: 'Test'
     UseVariableForMessage: true
