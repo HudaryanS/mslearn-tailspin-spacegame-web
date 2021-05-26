@@ -33,7 +33,7 @@ steps:
     Channel: '#test-channel'
     IconUrl: 'https://avatars3.githubusercontent.com/u/1507452?v=3&s=200'
     NotificationType: 'ChatMessage'
-    Message: |
+    Message:
       Test Slack task in Azure DevOps
       $(Pipeline.WebSiteName)
     UseVariableForMessage: true
