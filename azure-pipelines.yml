@@ -23,9 +23,12 @@ steps:
     MessageAuthor: 'Azure DevOps'
     Channel: '#test'
     NotificationType: 'ChatMessage'
-    Message: 'Test DevOps'
-    UseVariableForMessage: true
-    Title: 'Build Started'
+    Title: 'Build started.'
+    Text: |
+      Test run Slack notification.
+      $(Pipeline.WebSiteName)
+      $(CurrentRelease)
+    UseVariableForText: true
 
 - task: NuGetToolInstaller@1
 
