@@ -23,14 +23,13 @@ steps:
     MessageAuthor: 'Azure DevOps'
     Channel: '#test'
     NotificationType: 'ChatMessage'
-    Message: 'Hello from *Slack notification*'
-    AuthorName: 'Azure_DevOps'
     Title: 'Build started'
-    PreText: 'This is the attachment Pre-Text'
-    Text: 'Test build: /n $(Pipeline.WebSiteName) /n $(CurrentRelease)'
+    PreText: 'Release: $(CurrentRelease)'
+    UseVariableForPreText: true
+    Text: 'Pipeline started: $(Pipeline.WebSiteName)'
     UseVariableForText: true
     Color: '#1c7819'
-    FooterText: 'From AzureDevOps'
+
 # - task: SlackNotification@6
 #   inputs:
 #     SlackApiToken: '$(SlackApi)'
