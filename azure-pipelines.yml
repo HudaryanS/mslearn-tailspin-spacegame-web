@@ -23,6 +23,7 @@ steps:
     MessageAuthor: 'Azure DevOps'
     Channel: '#test'
     NotificationType: 'ChatMessage'
+    Message: 'Hello from *Slack notification*'
     AuthorName: 'Azure_DevOps'
     Title: 'Build started'
     Text: |
