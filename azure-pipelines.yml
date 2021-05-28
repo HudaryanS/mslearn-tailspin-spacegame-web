@@ -32,6 +32,8 @@ steps:
       $(Pipeline.WebSiteName)
       $(CurrentRelease)
     UseVariableForText: true
+    Color: '#1c7819'
+    FooterText: 'From AzureDevOps'
 # - task: SlackNotification@6
 #   inputs:
 #     SlackApiToken: '$(SlackApi)'
