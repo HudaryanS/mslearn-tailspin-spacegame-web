@@ -23,11 +23,9 @@ steps:
     MessageAuthor: 'Azure DevOps'
     Channel: '#test'
     NotificationType: 'ChatMessage'
+    Message: 'Test DevOps'
+    UseVariableForMessage: true
     Title: 'Build Started'
-    PreText: |
-      'Test notification from AzureDevops
-      $(Pipeline.WebSiteName)'
-    UseVariableForPreText: true
 
 - task: NuGetToolInstaller@1
 
