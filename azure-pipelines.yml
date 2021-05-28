@@ -20,15 +20,16 @@ steps:
 - task: SlackNotification@6
   inputs:
     SlackApiToken: '$(SlackApi)'
-    MessageAuthor: 'Azure DevOps'
+    MessageAuthor: 'Azure DevOps test'
     Channel: '#test'
     NotificationType: 'ChatMessage'
-    Title: 'Build started.'
-    Text: |
-      Test run Slack notification.
-      $(Pipeline.WebSiteName)
-      $(CurrentRelease)
-    UseVariableForText: true
+    Message: 'Hello from *Slack notification*'
+    AuthorName: 'Siarhie_Hudaryan'
+    Title: 'Test Slack notification task'
+    PreText: 'This is the attachment Pre-Text'
+    Text: 'This is _attachment__*main*_*text*'
+    Color: '#1c7819'
+    FooterText: 'From AzureDevOps'
 
 - task: NuGetToolInstaller@1
 
