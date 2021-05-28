@@ -26,6 +26,7 @@ steps:
     Message: 'Hello from *Slack notification*'
     AuthorName: 'Azure_DevOps'
     Title: 'Build started'
+    PreText: 'This is the attachment Pre-Text'
     Text: |
       Test build:
       $(Pipeline.WebSiteName)
