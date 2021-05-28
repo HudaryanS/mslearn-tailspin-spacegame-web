@@ -27,10 +27,7 @@ steps:
     AuthorName: 'Azure_DevOps'
     Title: 'Build started'
     PreText: 'This is the attachment Pre-Text'
-    Text: |
-      'Test build:
-      $(Pipeline.WebSiteName)
-      $(CurrentRelease)'
+    Text: 'Test build: /n $(Pipeline.WebSiteName) /n $(CurrentRelease)'
     UseVariableForText: true
     Color: '#1c7819'
     FooterText: 'From AzureDevOps'
