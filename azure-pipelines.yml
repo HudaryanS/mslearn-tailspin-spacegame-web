@@ -38,7 +38,7 @@ steps:
     Channel: '#test'
     NotificationType: 'ChatMessage'
     Message: 'Hello from *Slack notification*'
-    Title: 'Build started'
+    Title: 'Build started in Pipline: * $(Build.DefinitionName) *'
     Text: "Build_uri: * $(Build.BuildUri) *    Build number: * $(Build.BuildNumber) *"
 
 - task: NuGetToolInstaller@1
