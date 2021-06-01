@@ -41,9 +41,7 @@ steps:
     AuthorName: 'Siarhie_Hudaryan'
     Title: 'Build started'
     PreText: 'Release: $(CurrentRelease)'
-    UseVariableForPreText: true
     Text: 'Pipeline started: $(Pipeline.WebSiteName)'
-    UseVariableForText: true
     Color: '#1c7819'
     FooterText: 'From AzureDevOps'
 
