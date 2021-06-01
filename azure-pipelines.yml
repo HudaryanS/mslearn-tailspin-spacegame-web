@@ -41,7 +41,7 @@ steps:
     AuthorName: 'Siarhie_Hudaryan'
     Title: 'Build started'
     PreText: 'Release: $env:BUILD_BUILDNUMBER'
-    Text: 'Build number: $env:BUILD_BUILDNUMBER'
+    Text: 'Build number: ${{env:BUILD_BUILDNUMBER}}'
     UseVariableForText: true
     Color: '#1c7819'
     FooterText: 'From AzureDevOps'
