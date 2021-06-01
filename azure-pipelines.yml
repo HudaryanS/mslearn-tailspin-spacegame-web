@@ -17,12 +17,28 @@ variables:
 
 steps:
 
+# - task: SlackNotification@6
+#   inputs:
+#     SlackApiToken: '$(SlackApi)'
+#     MessageAuthor: 'Azure DevOps'
+#     Channel: '#test'
+#     NotificationType: 'ChatMessage'
+#     Title: 'Build started'
+#     PreText: 'Release: $(CurrentRelease)'
+#     UseVariableForPreText: true
+#     Text: 'Pipeline started: $(Pipeline.WebSiteName)'
+#     UseVariableForText: true
+#     Color: '#1c7819'
+#     FooterText: 'From AzureDevOps'
+
 - task: SlackNotification@6
   inputs:
     SlackApiToken: '$(SlackApi)'
-    MessageAuthor: 'Azure DevOps'
+    MessageAuthor: 'Azure DevOps test'
     Channel: '#test'
     NotificationType: 'ChatMessage'
+    Message: 'Hello from *Slack notification*'
+    AuthorName: 'Siarhie_Hudaryan'
     Title: 'Build started'
     PreText: 'Release: $(CurrentRelease)'
     UseVariableForPreText: true
@@ -30,20 +46,6 @@ steps:
     UseVariableForText: true
     Color: '#1c7819'
     FooterText: 'From AzureDevOps'
-
-# - task: SlackNotification@6
-#   inputs:
-#     SlackApiToken: '$(SlackApi)'
-#     MessageAuthor: 'Azure DevOps test'
-#     Channel: '#test'
-#     NotificationType: 'ChatMessage'
-#     Message: 'Hello from *Slack notification*'
-#     AuthorName: 'Siarhie_Hudaryan'
-#     Title: 'Test Slack notification task'
-#     PreText: 'This is the attachment Pre-Text'
-#     Text: 'This is _attachment__*main*_*text*'
-#     Color: '#1c7819'
-#     FooterText: 'From AzureDevOps'
 
 - task: NuGetToolInstaller@1
 
