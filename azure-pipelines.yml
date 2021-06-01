@@ -40,8 +40,8 @@ steps:
     Message: 'Hello from *Slack notification*'
     AuthorName: 'Siarhie_Hudaryan'
     Title: 'Build started'
-    PreText: 'Release: $(BUILD_BUILDNUMBER)'
-    Text: 'Build number: ${{env:BUILD_BUILDNUMBER}}'
+    PreText: 'Release: $(BUILD_BUILDNUMBER).'
+    Text: 'Build number: \nNew line.'
 
 - task: NuGetToolInstaller@1
 
