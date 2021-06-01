@@ -40,8 +40,9 @@ steps:
     Message: 'Hello from *Slack notification*'
     AuthorName: 'Siarhie_Hudaryan'
     Title: 'Build started'
-    PreText: 'Release: $(CurrentRelease)'
-    Text: 'Pipeline started: $(Pipeline.WebSiteName)'
+    PreText: 'Release: CurrentRelease'
+    Text: 'Pipeline started: Pipeline.WebSiteName'
+    UseVariableForText: true
     Color: '#1c7819'
     FooterText: 'From AzureDevOps'
 
