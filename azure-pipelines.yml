@@ -36,9 +36,8 @@ steps:
           )
           $body= @"
           {
-              "username": "Loading Bay",
-              "text": "MESSAGE_TEXT",
-              "icon_emoji":":rolled_up_newspaper:"
+              "username": "Azure test",
+              "text": "MESSAGE_TEXT"
           }
       "@
       
@@ -46,7 +45,7 @@ steps:
       }
       Write-Host "Sending slack message for BUILD: $($env:BUILD_BUILDID)"
       
-      Send-SlackMessage "<#test> <https://dev.azure.com/SiarheiHudaryan/Siarhei_Hudaryan/_apps/hub/ms.vss-build-web.ci-designer-hub?pipelineId=7/results?buildId=$($env:BUILD_BUILDID)|Build: $($env:BUILD_BUILDID)> is now on STAGING" '$(SlackWebHook)'
+      Send-SlackMessage "<https://dev.azure.com/SiarheiHudaryan/Siarhei_Hudaryan/_apps/hub/ms.vss-build-web.ci-designer-hub?pipelineId=7/results?buildId=$($env:BUILD_BUILDID)|Build: $($env:BUILD_BUILDID)> is now on STAGING\nBuild_repository: * $(Build.Repository.Name)*" '$(SlackWebHook)'
 
 - task: SlackNotification@6
   inputs:
