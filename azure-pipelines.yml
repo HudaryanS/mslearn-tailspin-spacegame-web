@@ -33,7 +33,7 @@ steps:
 #     Title: 'Build started'
 #     PreText: 'Release: $(CurrentRelease)'
 - task: PowerShell@2
-  displayName: "$(SlackApi)"
+  displayName: "$(TeestValue)"
   inputs:
     targetType: 'inline'
     script: |
