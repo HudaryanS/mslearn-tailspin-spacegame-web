@@ -5,13 +5,13 @@
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
 
 trigger:
-- task: AzureCLI@2
-  inputs:
-    scriptType: 'ps'
-    scriptLocation: 'inlineScript'
-    inlineScript: |
-      az vm run-command invoke -g myResourceGroup -n myVm --command-id RunShellScript --scripts "c:\windows\System32\inetsrv\appcmd.exe "recycle apppool /apppool.name:LSDigitalHubCD"
-      "
+#- task: AzureCLI@2
+#  inputs:
+#    scriptType: 'ps'
+#    scriptLocation: 'inlineScript'
+#    inlineScript: |
+#      az vm run-command invoke -g myResourceGroup -n myVm --command-id RunShellScript --scripts "c:\windows\System32\inetsrv\appcmd.exe "recycle apppool /apppool.name:LSDigitalHubCD"
+#      "
 - master
 
 pool:
@@ -33,6 +33,7 @@ steps:
 #     Title: 'Build started'
 #     PreText: 'Release: $(CurrentRelease)'
 - task: PowerShell@2
+  displayName: "$(SlackApi)"
   inputs:
     targetType: 'inline'
     script: |
